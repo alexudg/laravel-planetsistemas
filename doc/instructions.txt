@@ -1,0 +1,19 @@
+* install composer & comprobate
+  $ composer --version
+
+* create project
+  $ composer create-project --prefer-dist laravel/laravel larave-planetsistemas 
+
+* create database & edit .env  
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=facturamx
+  DB_USERNAME=root
+  DB_PASSWORD=
+
+* comprobate if runing serve on port 8000
+  $ php artisan serve
+
+* comprobate if database connected (first stop serve ctrl + C)
+  $ php artisan migrate
