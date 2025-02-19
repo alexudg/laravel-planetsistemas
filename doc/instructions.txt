@@ -4,7 +4,9 @@
 * create project
   $ composer create-project --prefer-dist laravel/laravel larave-planetsistemas 
 
-* create database & edit .env  
+* create DB mysql with charset utf8mb4_spanish_ci
+
+* edit .env  
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
   DB_PORT=3306
@@ -12,8 +14,34 @@
   DB_USERNAME=root
   DB_PASSWORD=
 
+* edit config/database.php laravel 
+  'mysql' => [
+    'driver' => 'mysql',
+    'host' => env('DB_HOST', '127.0.0.1'),
+    'port' => env('DB_PORT', '3306'),
+    'database' => env('DB_DATABASE', 'forge'),
+    'username' => env('DB_USERNAME', 'forge'),
+    'password' => env('DB_PASSWORD', ''),
+    'unix_socket' => env('DB_SOCKET', ''),
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_spanish_ci',
+    'prefix' => '',
+    'strict' => true,
+    'engine' => null,
+  ],
+
 * comprobate if runing serve on port 8000
   $ php artisan serve
 
 * comprobate if database connected (first stop serve ctrl + C)
   $ php artisan migrate
+
+  review if database add tables default from laravel
+
+* create repository on github
+
+* create new proyect on Koyeb.com 
+  create new project type github, search repository of github public
+
+* add environment variables APP_KEY, DB_*
+  
